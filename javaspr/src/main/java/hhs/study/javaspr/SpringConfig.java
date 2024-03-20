@@ -1,5 +1,6 @@
 package hhs.study.javaspr;
 
+import hhs.study.javaspr.aop.TimeTraceAop;
 import hhs.study.javaspr.repository.JdbcMemberRepository;
 import hhs.study.javaspr.repository.MemberRepository;
 import hhs.study.javaspr.repository.MemoryMemberRepository;
