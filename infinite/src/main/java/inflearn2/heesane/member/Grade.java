@@ -1,4 +1,6 @@
 package inflearn2.heesane.member;
 
-public class Grade {
+public enum Grade {
+    BASIC,
+    VIP
 }
