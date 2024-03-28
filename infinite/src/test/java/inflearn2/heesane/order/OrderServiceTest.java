@@ -1,16 +1,24 @@
 package inflearn2.heesane.order;
 
+import inflearn2.heesane.AppConfig;
 import inflearn2.heesane.member.Grade;
 import inflearn2.heesane.member.Member;
 import inflearn2.heesane.member.MemberService;
-import inflearn2.heesane.member.MemberServiceImpl;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void beforeEach(){
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
     void createOrder(){
@@ -19,9 +27,9 @@ public class OrderServiceTest {
 
         //when
         memberService.join(member);
-        Member findMember = memberService.findMember(1L);
+        Order order = orderService.createOrder(1L, "itemA", 10000);
 
         //then
-        Assertions.assertThat(member).isEqualTo(findMember);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 }

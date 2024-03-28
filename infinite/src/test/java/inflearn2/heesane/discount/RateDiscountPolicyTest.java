@@ -2,12 +2,10 @@ package inflearn2.heesane.discount;
 
 import inflearn2.heesane.member.Grade;
 import inflearn2.heesane.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RateDiscountPolicyTest {
 
