@@ -1,11 +1,8 @@
 package inflearn2.heesane.order;
 
 import inflearn2.heesane.discount.DiscountPolicy;
-import inflearn2.heesane.discount.FixDiscountPolicy;
-import inflearn2.heesane.discount.RateDiscountPolicy;
 import inflearn2.heesane.member.Member;
 import inflearn2.heesane.member.MemberRepository;
-import inflearn2.heesane.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
