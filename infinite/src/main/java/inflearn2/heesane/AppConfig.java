@@ -1,7 +1,7 @@
 package inflearn2.heesane;
 
 import inflearn2.heesane.discount.DiscountPolicy;
-import inflearn2.heesane.discount.FixDiscountPolicy;
+import inflearn2.heesane.discount.RateDiscountPolicy;
 import inflearn2.heesane.member.MemberService;
 import inflearn2.heesane.member.MemberServiceImpl;
 import inflearn2.heesane.member.MemoryMemberRepository;
@@ -22,6 +22,6 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }

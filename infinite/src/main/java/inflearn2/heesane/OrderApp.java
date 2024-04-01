@@ -3,10 +3,8 @@ package inflearn2.heesane;
 import inflearn2.heesane.member.Grade;
 import inflearn2.heesane.member.Member;
 import inflearn2.heesane.member.MemberService;
-import inflearn2.heesane.member.MemberServiceImpl;
 import inflearn2.heesane.order.Order;
 import inflearn2.heesane.order.OrderService;
-import inflearn2.heesane.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
@@ -19,7 +17,7 @@ public class OrderApp {
 
         memberService.join(member);
 
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
+        Order order = orderService.createOrder(memberId, "itemA", 20000);
         System.out.println("order = "+ order);
     }
 }
