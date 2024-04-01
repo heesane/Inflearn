@@ -1,5 +1,6 @@
 package inflearn2.heesane;
 
+import inflearn2.heesane.discount.DiscountPolicy;
 import inflearn2.heesane.discount.FixDiscountPolicy;
 import inflearn2.heesane.member.MemberService;
 import inflearn2.heesane.member.MemberServiceImpl;
@@ -9,10 +10,18 @@ import inflearn2.heesane.order.OrderServiceImpl;
 
 public class AppConfig {
     public MemberService memberService(){
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(MemberRepository());
+    }
+
+    private MemoryMemberRepository MemberRepository() {
+        return new MemoryMemberRepository();
     }
 
     public OrderService orderService(){
-        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+        return new OrderServiceImpl(MemberRepository(), discountPolicy());
+    }
+
+    public DiscountPolicy discountPolicy(){
+        return new FixDiscountPolicy();
     }
 }
