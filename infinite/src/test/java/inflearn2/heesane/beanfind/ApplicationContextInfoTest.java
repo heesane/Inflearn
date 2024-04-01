@@ -27,10 +27,11 @@ class ApplicationContextInfoTest {
             BeanDefinition bean = ac.getBeanDefinition(beanDefinitionName);
 
             // ROLE_APPLICATION: 직접 등록한 애플리케이션 빈
-            if (bean.getRole() == BeanDefinition.ROLE_APPLICATION){
+            if (bean.getRole() == BeanDefinition.ROLE_INFRASTRUCTURE){
                 Object beanObject = ac.getBean(beanDefinitionName);
                 System.out.println("name = " + beanDefinitionName + " object = " + beanObject);
             }
         }
     }
+
 }
