@@ -3,7 +3,6 @@ package inflearn2.heesane.beanfind;
 import inflearn2.heesane.AppConfig;
 import inflearn2.heesane.member.MemberService;
 import inflearn2.heesane.member.MemberServiceImpl;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
